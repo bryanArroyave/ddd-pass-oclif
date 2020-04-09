@@ -9,7 +9,7 @@ const generator = {
             const split = oldContent.split(token);
             if (split[0] && split[1]) {
                 content = split[0] + token + "\n" + content + "\n" + split[1];
-                
+                helpers.file.update(_path,content);
             }
         }
 

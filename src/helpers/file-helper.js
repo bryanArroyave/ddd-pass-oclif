@@ -25,7 +25,8 @@ const file = {
 
     },
     updateFile: (path, content) => {
-
+        this.deleteFile(path);
+        this.createFile(path, content)
     },
     deleteFile: (path) => {
         fs.unlink(path, err => {
